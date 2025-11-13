@@ -1,7 +1,7 @@
 package io.github.sullis.playground.jackson;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
 
 public class JacksonHelper {
   private ObjectMapper mapper;
@@ -10,12 +10,12 @@ public class JacksonHelper {
     mapper = new ObjectMapper();
   }
 
-  public String toJsonString(Object object) throws JsonProcessingException {
+  public String toJsonString(Object object) throws JacksonException {
     return mapper.writeValueAsString(object);
   }
 
   public <T> T fromJsonString(String json, Class<T> valueType)
-      throws JsonProcessingException {
+      throws JacksonException {
     return mapper.readValue(json, valueType);
   }
 }
