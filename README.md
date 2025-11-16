@@ -4,6 +4,7 @@ Jackson java library playground
 
 # OpenRewrite
 - recipe: [UpgradeJackson_2_3](https://docs.openrewrite.org/recipes/java/jackson/upgradejackson_2_3)
+- recipe: [JacksonBestPractices](https://docs.openrewrite.org/recipes/java/jackson/jacksonbestpractices)
 - code: [rewrite-jackson](https://github.com/openrewrite/rewrite-jackson/blob/main/src/main/resources/META-INF/rewrite/jackson-2-3.yml)
 
 # Jackson project
